@@ -1,3 +1,8 @@
+<a href ="https://github.com/MNFaust/Cowrie-dl">
+  <img src="https://www.stcloudstate.edu/ucomm/_files/images/primary_logotype1.png"
+    title="May Contain Malicious Binaries/Scripts" align="right" />
+    </a>
+
 # IA612-Bro Project
 The default clone will be from the working branch in order to keep things clean. I will merge the working branch into the master every sunday night before my report to backup all changes. 
 
