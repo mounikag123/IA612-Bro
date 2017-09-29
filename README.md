@@ -1,6 +1,6 @@
 <a href ="https://github.com/MNFaust/Cowrie-dl">
   <img src="https://www.stcloudstate.edu/ucomm/_files/images/primary_logotype1.png"
-    title="IA-612 Term Project" align="right" height=75 length=75 />
+    title="IA-612 Term Project" align="left" height=75 length=75 />
     </a>
 
 # IA612-Bro Project
