@@ -7,3 +7,10 @@ The default clone will be from the working branch in order to keep things clean.
 - *git add <your changes>*  --> Add any new documents, code, folders, etc.
 - *git commit* --> Commits your changes and requests a comment from you to tell us of the changes
 - *git push origin working*  --> Pushes all changes to the working branch
+
+## Useful Links
+- [SCSU Computer Science Software Store](https://e5.onthehub.com/WebStore/ProductsByMajorVersionList.aspx?cmi_cs=1&cmi_mnuMain=2b44b80c-dfc9-e111-971c-f04da23e67f6&ws=72f0cb23-dd56-e311-93f7-b8ca3a5db7a1&vsro=8)
+- [Try.Bro.org Scripting Engine](http://try.bro.org/#/?example=hello)
+- [SecurityOnion Download](https://github.com/Security-Onion-Solutions/security-onion/blob/master/Verify_ISO.md)
+- [Ubuntu 16.04 LTS Download](https://www.ubuntu.com/download/desktop)
+- [Kali 2017.2 Rolling Download](https://www.kali.org/downloads/)
