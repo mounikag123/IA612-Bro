@@ -2,8 +2,6 @@
   <img src="https://www.stcloudstate.edu/ucomm/_files/images/primary_logotype1.png"
     title="IA-612 Term Project" align="left" height=75 length=75 />
     </a>
-[![Inline docs](http://inch-ci.org/github/{MNFaust}/{IA612-Bro}.svg?branch=master)](http://inch-ci.org/github/{MNFaust}/{IA612-Bro})
-[![Build Status](https://travis-ci.org/{MNFaust}/{IA612-Bro}.png?branch=master)](https://travis-ci.org/{MNFaust}/{IA612-Bro})
 
 # IA612-Bro Project
 The default clone will be from the working branch in order to keep things clean. I will merge the working branch into the master every sunday night before my report to backup all changes. 
