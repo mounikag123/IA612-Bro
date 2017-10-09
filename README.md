@@ -7,6 +7,12 @@
 The default clone will be from the working branch in order to keep things clean. I will merge the working branch into the master every sunday night before my report to backup all changes. 
 
 ## Git Commands:
+### Windows: 
+- Download Git for windows [here](https://desktop.github.com/)
+- Sign in and select the IA612-Bro Repository 
+- Pull the most current working repository
+- Commit and Push all data when neccessary
+### Linux:
 - *git clone* https://github.com/MNFaust/IA612-Bro.git
 - *git pull origin working* --> Every time you start to work on the project, make sure you're working on the lasted build with this command.
 - *git add <your changes>*  --> Add any new documents, code, folders, etc.
