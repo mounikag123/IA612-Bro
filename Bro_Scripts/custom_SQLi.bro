@@ -62,13 +62,18 @@ export {
 
 
 event http_request(c:connection,method: string, original_URI: string, unescaped_URI: string, version: string) {
-    print fmt("HTTP REQUEST");
-    #local URI1 = unescaped_URI;
+	
+    local URI1 = unescaped_URI;
     local URI2 = original_URI;
 
     if (sql_injection_uri in URI2 ){
 		print fmt("ID: %s SQL INJECTION DETECTED in %s from IP: %s | String: %s ", c$uid, method, c$id$orig_h, unescaped_URI);
 		#print fmt("ORIG %s", original_URI);
     }
+	  if (sql_injection_uri in URI1 ){
+		print fmt("ID: %s SQL INJECTION DETECTED in %s from IP: %s | String: %s ", c$uid, method, c$id$orig_h, unescaped_URI);
+		#print fmt("ORIG %s", original_URI);
+    }
+
 
 }
