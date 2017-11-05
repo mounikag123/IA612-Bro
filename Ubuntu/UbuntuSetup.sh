@@ -45,15 +45,14 @@ cd /var/www/html
 git clone https://github.com/ethicalhack3r/DVWA.git
 mv DVWA dvwa
 
-echo "Edit dvwa/config/config.inc.php - Need to add captcha keys"
-echo "Edit /etc/php/7.1/apache2/php.ini - change: allow_url_include = On"
+echo "#!/bin/bash" > data.sh
+echo "Edit dvwa/config/config.inc.php - Need to add captcha keys" >> data.sh
+echo "Edit /etc/php/7.1/apache2/php.ini - change: allow_url_include = On" >> data.sh
 
 echo "[+] Starting TMUX session to edit files"
-tmux new -s DVWA 
+tmux new -d -s DVWA data.sh
 tmux attach -t DVWA
 
-echo "Edit dvwa/config/config.inc.php - Need to add captcha keys"
-echo "Edit /etc/php/7.1/apache2/php.ini - change: allow_url_include = On"
 #----------------------------------------------------------------------
 # Edit dvwa/config/config.inc.php - Need to add captcha keys
 # Edit /etc/php/7.1/apache2/php.ini - change: allow_url_include = On
@@ -73,7 +72,7 @@ if [ $ans == "Y" ] || [ $ans == "y" ]
 		service apache2 start
 		echo "[+] Navigating to DVWA setup page"
 		firefox var/www/html/dvwa/setup.php &
-
+		rm -rf data.sh
 		echo "[+] Done"
 	else 
 		echo "PROGRAM STOPPED, PLEASE EDIT FILES"
