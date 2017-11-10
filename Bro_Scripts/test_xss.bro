@@ -15,7 +15,8 @@ export {
 	};
 	
 const match_xss_uri = /[<>]/ &redef;
-const match_xss_uri1 = /((\%3C)|<)((\%2F)|\/)*[a-z0-9\%]+((\%3E)|>)/ &redef;
+const match_xss_uri1 = /[<>]/ &redef;
+const match_xss_body = /[3C3E]/ &redef;
 global ascore:count &redef;
 global http_body:string &redef;
 
@@ -35,14 +36,15 @@ event http_request(c: connection, method: string, original_URI: string,unescaped
 	local URI2 = original_URI;
 
 	if(match_xss_uri in URI1){
-		NOTICE([$note=XSS_URI_Injection_Attack,
-		$msg=fmt("XSS Attack from %s to destination: %s with Attack string %s", c$id$orig_h, c$id$resp_h, c$http$uri)]);
-		print fmt("(1) XSS Attack from %s to destination: %s with Attack string %s", c$id$orig_h, c$id$resp_h, c$http$uri);
+		++ascore;
+	if(match_xss_uri1 in URI2)
+		++ascore;
 	}
-	if(match_xss_uri1 in URI2){
+	ascore = 3;
+	if ( ascore >= 3){
 		NOTICE([$note=XSS_URI_Injection_Attack,
+		$conn=c,
 		$msg=fmt("XSS Attack from %s to destination: %s with Attack string %s", c$id$orig_h, c$id$resp_h, c$http$uri)]);
-		print fmt("(2) XSS Attack from %s to destination: %s with Attack string %s", c$id$orig_h, c$id$resp_h, c$http$uri);
+		print fmt("XSS Attack from %s to destination: %s with Attack string %s", c$id$orig_h, c$id$resp_h, c$http$uri);
 	}
-	
 }
