@@ -25,3 +25,4 @@ The default clone will be from the working branch in order to keep things clean.
 - [SecurityOnion Download](https://github.com/Security-Onion-Solutions/security-onion/blob/master/Verify_ISO.md)
 - [Ubuntu 16.04 LTS Download](https://www.ubuntu.com/download/desktop)
 - [Kali 2017.2 Rolling Download](https://www.kali.org/downloads/)
+- [Security Onion Setup (VMWARE)](https://github.com/Security-Onion-Solutions/security-onion/wiki/VMWare-Walkthrough)
