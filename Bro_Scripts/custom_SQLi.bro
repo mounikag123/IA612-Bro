@@ -1,9 +1,15 @@
+@load base/frameworks/notice
+@load base/protocols/ssh
+@load base/protocols/http
 
-#@load base/protocols/http;
 module HTTP;
 
 export {
-	
+	redef enum Notice::Type += {
+		XSS_URI_Injection_Attack,
+		XSS_Post_Injection_Attack,
+ };
+ 
 	const sql_injection_uri = 
 		  /[\?&][^[:blank:]\x00-\x37\|]+?=[\-[:alnum:]%]+([[:blank:]\x00-\x37]|\/\*.*?\*\/)*['"]?([[:blank:]\x00-\x37]|\/\*.*?\*\/|\)?;)+.*?([hH][aA][vV][iI][nN][gG]|[uU][nN][iI][oO][nN]|[eE][xX][eE][cC]|[sS][eE][lL][eE][cC][tT]|[dD][eE][lL][eE][tT][eE]|[dD][rR][oO][pP]|[dD][eE][cC][lL][aA][rR][eE]|[cC][rR][eE][aA][tT][eE]|[iI][nN][sS][eE][rR][tT])([[:blank:]\x00-\x37]|\/\*.*?\*\/)+/
 		| /[\?&][^[:blank:]\x00-\x37\|]+?=[\-0-9%]+([[:blank:]\x00-\x37]|\/\*.*?\*\/)*['"]?([[:blank:]\x00-\x37]|\/\*.*?\*\/|\)?;)+([xX]?[oO][rR]|[nN]?[aA][nN][dD])([[:blank:]\x00-\x37]|\/\*.*?\*\/)+['"]?(([^a-zA-Z&]+)?=|[eE][xX][iI][sS][tT][sS])/
@@ -16,6 +22,8 @@ export {
 
 
 event http_request(c:connection,method: string, original_URI: string, unescaped_URI: string, version: string) {
+	local msg:UMessage;
+	local body:UMessage;
 	
     local URI1 = unescaped_URI;
     local URI2 = original_URI;
@@ -23,11 +31,12 @@ event http_request(c:connection,method: string, original_URI: string, unescaped_
     if (sql_injection_uri in URI2 ){
 		print fmt("ID: %s SQL INJECTION DETECTED in %s from IP: %s | String: %s ", c$uid, method, c$id$orig_h, unescaped_URI);
 		#print fmt("ORIG %s", original_URI);
+		NOTICE([$note=XSS_URI_Injection_Attack,$msg=fmt("SQLi Attack from %s to destination: %s with Attack string %s", c$id$orig_h, c$id$resp_h, c$http$uri)]);
     }
 	  if (sql_injection_uri in URI1 ){
 		print fmt("ID: %s SQL INJECTION DETECTED in %s from IP: %s | String: %s ", c$uid, method, c$id$orig_h, unescaped_URI);
 		#print fmt("ORIG %s", original_URI);
+		NOTICE([$note=XSS_URI_Injection_Attack,$msg=fmt("SQLi Attack from %s to destination: %s with Attack string %s", c$id$orig_h, c$id$resp_h, c$http$uri)]);
     }
-
 
 }
