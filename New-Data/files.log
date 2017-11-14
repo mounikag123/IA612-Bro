@@ -1,0 +1,23 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	files
+#open	2017-11-14-23-45-25
+#fields	ts	fuid	tx_hosts	rx_hosts	conn_uids	source	depth	analyzers	mime_type	filename	duration	local_orig	is_orig	seen_bytes	total_bytes	missing_bytes	overflow_bytes	timedout	parent_fuid	md5	sha1	sha256	extracted	extracted_cutoff	extracted_size
+#types	time	string	set[addr]	set[addr]	set[string]	string	count	set[string]	string	string	interval	bool	bool	count	count	count	count	bool	string	string	string	string	string	bool	count
+1510703125.128681	Ftkpbm4iwELM4PoHx1	192.168.1.216	192.168.1.231	CdAibT1R4l7chUCxWk	HTTP	0	(empty)	text/html	-	0.000000	-	F	1523	-	0	0	F	-	-	-	-	-	-	-
+1510703125.368959	F0J8f521IxKYhQljf4	192.168.1.216	192.168.1.231	CdAibT1R4l7chUCxWk	HTTP	0	(empty)	text/plain	-	0.000000	-	F	842	-	0	0	F	-	-	-	-	-	-	-
+1510703130.935302	Fb9Jw44VSLwAmfIgDd	192.168.1.231	192.168.1.216	CqSBcV1JjmMnxUzPu2	HTTP	0	(empty)	text/plain	-	0.000000	-	T	88	88	0	0	F	-	-	-	-	-	-	-
+1510703130.985301	F34ALbyk51nIJith9	192.168.1.216	192.168.1.231	CqSBcV1JjmMnxUzPu2	HTTP	0	(empty)	text/html	-	0.000000	-	F	7517	-	0	0	F	-	-	-	-	-	-	-
+1510703131.034775	FYJADKUCSEUHC4Hvb	192.168.1.216	192.168.1.231	CqSBcV1JjmMnxUzPu2	HTTP	0	(empty)	text/plain	-	0.000000	-	F	4026	-	0	0	F	-	-	-	-	-	-	-
+1510703131.036361	FKF9Ezn0Uc8gi4A4j	192.168.1.216	192.168.1.231	C86hA4k7QcteLrnY4	HTTP	0	(empty)	text/plain	-	0.000000	-	F	775	-	0	0	F	-	-	-	-	-	-	-
+1510703140.365074	FAnEkd3TcUWXkoxYO8	192.168.1.216	192.168.1.231	CmChUZgongjaOAd6h	HTTP	0	(empty)	text/html	-	0.000000	-	F	5278	-	0	0	F	-	-	-	-	-	-	-
+1510703140.371133	FYRWEm41UTFfEF5u82	192.168.1.216	192.168.1.231	CcXTqx1KcjyqpCELxc	HTTP	0	(empty)	text/html	-	0.000000	-	F	5278	-	0	0	F	-	-	-	-	-	-	-
+1510703141.968008	FeSwXUPgL9DsJNSE8	192.168.1.216	192.168.1.231	CcXTqx1KcjyqpCELxc	HTTP	0	(empty)	text/html	-	0.000000	-	F	5137	-	0	0	F	-	-	-	-	-	-	-
+1510703141.974288	FFTAQh3stLwY5nxmF3	192.168.1.216	192.168.1.231	CcXTqx1KcjyqpCELxc	HTTP	0	(empty)	text/html	-	0.000000	-	F	5137	-	0	0	F	-	-	-	-	-	-	-
+1510703148.123381	FQtmOP3bnK3cZB1oTe	192.168.1.216	192.168.1.231	CpiuxO2i4emY7VDn83	HTTP	0	(empty)	text/html	-	0.000000	-	F	5188	-	0	0	F	-	-	-	-	-	-	-
+1510703156.137204	FHCaY54C8By1ZvlIxf	192.168.1.216	192.168.1.231	CnwVqz3EykOfsUY425	HTTP	0	(empty)	text/html	-	0.000000	-	F	5186	-	0	0	F	-	-	-	-	-	-	-
+1510703161.182218	F5yTg84ZNNiT5sy7ia	192.168.1.216	192.168.1.231	CbQgtu1UXLuIqTZPV6	HTTP	0	(empty)	text/html	-	0.000000	-	F	5211	-	0	0	F	-	-	-	-	-	-	-
+1510703166.359637	FH0NcL3zwMYa5XKkl5	192.168.1.216	192.168.1.231	CXWkV94sARvzegbze	HTTP	0	(empty)	text/html	-	0.000000	-	F	5204	-	0	0	F	-	-	-	-	-	-	-
+#close	2017-11-14-23-46-17
