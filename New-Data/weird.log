@@ -3,8 +3,14 @@
 #empty_field	(empty)
 #unset_field	-
 #path	weird
-#open	2017-11-14-23-44-30
+#open	2017-12-02-18-22-26
 #fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	name	addl	notice	peer
 #types	time	string	addr	port	addr	port	string	string	bool	string
-1510703070.298042	C2TNAX1BKnilMgsTX4	192.168.1.115	5353	224.0.0.251	5353	dns_unmatched_msg	-	F	bro
-#close	2017-11-14-23-46-17
+1512238946.423445	CvwFve2rKmLDF30yS2	192.168.1.116	52689	192.168.1.216	80	inflate_failed	-	F	bro
+1512238971.101339	Cl7Rx92RJzzey6KK33	192.168.1.116	52431	216.58.192.234	443	truncated_tcp_payload	-	F	bro
+1512238971.101375	Cl7Rx92RJzzey6KK33	192.168.1.116	52431	216.58.192.234	443	above_hole_data_without_any_acks	-	F	bro
+1512238971.613534	Cjntpy3FnxmFMLsxQ5	192.168.1.116	52698	172.217.8.170	443	truncated_tcp_payload	-	F	bro
+1512239055.068575	CFlmMK3Dizw90ljJA9	fe80::20c:29ff:fe15:aa3e	5353	ff02::fb	5353	dns_unmatched_msg	-	F	bro
+1512239055.069383	C2jHzt3BI5NX6sJtUa	192.168.1.31	5353	224.0.0.251	5353	dns_unmatched_msg	-	F	bro
+1512239083.081479	ChcKR54saNNeE6PyXg	192.168.1.116	52745	52.109.120.22	443	truncated_tcp_payload	-	F	bro
+#close	2017-12-02-18-24-47
