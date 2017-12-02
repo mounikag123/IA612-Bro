@@ -32,16 +32,20 @@ event http_request(c:connection,method: string, original_URI: string, unescaped_
 	
     local URI1 = unescaped_URI;
     local URI2 = original_URI;
+    local src_ip = c$id$orig_h;
+    local dst_ip = c$id$resp_h;
 
     if (sql_injection_uri in URI2 ){
 		print fmt("ID: %s SQL INJECTION DETECTED in %s from IP: %s | String: %s ", c$uid, method, c$id$orig_h, unescaped_URI);
 		#print fmt("ORIG %s", original_URI);
-		NOTICE([$note=SQLi_URI_Injection_Attack,$msg=fmt("SQLi Attack from %s to destination: %s with Attack string %s", c$id$orig_h, c$id$resp_h, c$http$uri)]);
+		NOTICE([$note=SQLi_URI_Injection_Attack,$msg=fmt("XSS Attack from %s to destination: %s with Attack string %s", c$id$orig_h, c$id$resp_h, c$http$uri),
+	    $src=src_ip,$dst=dst_ip]);
     }
 	  if (sql_injection_uri in URI1 ){
 		print fmt("ID: %s SQL INJECTION DETECTED in %s from IP: %s | String: %s ", c$uid, method, c$id$orig_h, unescaped_URI);
 		#print fmt("ORIG %s", original_URI);
-		NOTICE([$note=SQLi_URI_Injection_Attack,$msg=fmt("SQLi Attack from %s to destination: %s with Attack string %s", c$id$orig_h, c$id$resp_h, c$http$uri)]);
+		NOTICE([$note=SQLi_URI_Injection_Attack,$msg=fmt("XSS Attack from %s to destination: %s with Attack string %s", c$id$orig_h, c$id$resp_h, c$http$uri),
+	    $src=src_ip,$dst=dst_ip]);
     }
 
 }
